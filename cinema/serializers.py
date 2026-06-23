@@ -145,7 +145,6 @@ class MovieSessionDetailSerializer(MovieSessionSerializer):
         many=True,
         read_only=True
     )
-    image = serializers.ImageField(source="movie.image", read_only=True)
 
     class Meta:
         model = MovieSession
@@ -155,7 +154,6 @@ class MovieSessionDetailSerializer(MovieSessionSerializer):
             "movie",
             "cinema_hall",
             "taken_places",
-            "image"
         )
 
 
